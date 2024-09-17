@@ -31,6 +31,9 @@ ModMenuCommands.register("EXP",{
     "description" => _INTL("Get a massive EXP boost"),
     "effect"      => proc{
       CHEATS["EXPBOOST"] = !CHEATS["EXPBOOST"]
+      #File.open("test.txt", 'w'){
+       # |file| file.write(GameData::Item.list_all())
+      #}
       if CHEATS["EXPBOOST"]
         pbMessage("Enabled")
       else
@@ -86,7 +89,7 @@ ModMenuCommands.register("starterpack",{
       "description" => _INTL("Adds Rarecandy to your bag"),
       "effect"      => proc{
         pbPlayDecisionSE
-        $PokemonBag.pbStoreItem(:RARECANDY, 999 - pbQuantity(item))
+        $PokemonBag.pbStoreItem(:RARECANDY, 999 - pbQuantity(:RARECANDY))
       }
 })
 	ModMenuCommands.register("starterpackballs",{
@@ -113,7 +116,7 @@ ModMenuCommands.register("starterpack",{
       "description" => _INTL("Adds Pokeballs to your bag"),
       "effect"      => proc{
         pbPlayDecisionSE
-        $PokemonBag.pbStoreItem(:POKEBALL, 999 - pbQuantity(item))
+        $PokemonBag.pbStoreItem(:POKEBALL, 999 - pbQuantity(:POKEBALL))
       }
 })
   ModMenuCommands.register("starterpackgb",{
@@ -122,7 +125,7 @@ ModMenuCommands.register("starterpack",{
       "description" => _INTL("Adds Pokeballs to your bag"),
       "effect"      => proc{
         pbPlayDecisionSE
-        $PokemonBag.pbStoreItem(:GREATBALL, 999 - pbQuantity(item))
+        $PokemonBag.pbStoreItem(:GREATBALL, 999 - pbQuantity(:GREATBALL))
       }
 })
   ModMenuCommands.register("starterpackub",{
@@ -131,7 +134,7 @@ ModMenuCommands.register("starterpack",{
       "description" => _INTL("Adds Pokeballs to your bag"),
       "effect"      => proc{
         pbPlayDecisionSE
-        $PokemonBag.pbStoreItem(:ULTRABALL, 999 - pbQuantity(item))
+        $PokemonBag.pbStoreItem(:ULTRABALL, 999 - pbQuantity(:ULTRABALL))
       }
 })
   ModMenuCommands.register("starterpackfb",{
@@ -140,7 +143,7 @@ ModMenuCommands.register("starterpack",{
       "description" => _INTL("Adds Pokeballs to your bag"),
       "effect"      => proc{
         pbPlayDecisionSE
-        $PokemonBag.pbStoreItem(:QUICKBALL, 999 - pbQuantity(item))
+        $PokemonBag.pbStoreItem(:QUICKBALL, 999 - pbQuantity(:QUICKBALL))
       }
 })
   ModMenuCommands.register("starterpackevo",{
@@ -163,8 +166,8 @@ ModMenuCommands.register("starterpack",{
       "description" => _INTL("Adds Splicers to your bag"),
       "effect"      => proc{
         pbPlayDecisionSE
-        $PokemonBag.pbStoreItem(:INFINITEREVERSERS, 1 - pbQuantity(item))
-        $PokemonBag.pbStoreItem(:INFINITESPLICERS, 1 - pbQuantity(item))
+        $PokemonBag.pbStoreItem(:INFINITEREVERSERS, 1 - pbQuantity(:INFINITEREVERSERS))
+        $PokemonBag.pbStoreItem(:INFINITESPLICERS, 1 - pbQuantity(:INFINITESPLICERS))
       }
 })
   ModMenuCommands.register("starterpackother",{
