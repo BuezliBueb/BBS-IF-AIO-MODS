@@ -7,4 +7,4 @@ https://github.com/BuezliBueb/BB-s-Infinite-Fusion-No-HM<br>
 https://github.com/BuezliBueb/BB-s-Infinite-Fusion-Quality-of-Life-Cheats<br>
 https://github.com/BuezliBueb/BB-s-Infinite-Fusion-Ability-Randomizer<br>
 
-<a href="">Download</a> and Drag into the Folder where Game.exe is.
+<a href="https://github.com/BuezliBueb/BBS-IF-AIO-MODS/releases/download/AIO/AIO.zip">Download</a> and Drag into the Folder where Game.exe is.
